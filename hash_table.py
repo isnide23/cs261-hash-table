@@ -48,12 +48,29 @@ class HashTable:
 
     def hash(self, key):
         hash_value = hash(key) % self.size
-        print(hash_value)
         return hash_value
 
-    # def delete(self, key):
-    #     index = self.hash(key)
-    #     self.data[index][0] 
+    def delete(self, key):
+        index = hash(key) % self.size
+        for i in self.data[index]:
+            if i[0] == key:
+                i[1] = None
+                return
+        
+
+
+    def clear(self):
+        self.data.clear()
+
+        i = 0
+        while i < self.size:
+            self.data.append([])
+            i += 1
+
+    def keys(self):
+        for i in self.data:
+            return self.data[i]
+
         
 
 
