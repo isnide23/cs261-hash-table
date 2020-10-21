@@ -68,8 +68,8 @@ class HashTable:
             i += 1
 
     def keys(self):
-        for i in self.data:
-            return self.data[i]
+        for i in self.data[i][0]:
+            return self.data[i][0]
 
         
 
